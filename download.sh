@@ -6,7 +6,6 @@ ner_url="https://nlp.stanford.edu/software/stanford-ner-2018-10-16.zip"
 pos_url="https://nlp.stanford.edu/software/stanford-postagger-2018-10-16.zip"
 wordnet_url="http://wordnetcode.princeton.edu/3.0/WordNet-3.0.tar.gz"
 lookup15_url="http://www.coli.uni-saarland.de/projects/amparser/lookupdata15.zip"
-lookup17_url="http://www.coli.uni-saarland.de/projects/amparser/lookupdata17.zip"
 
 if [ ! -f am-tools.jar ]; then
 	curl -OL $am_tools_url

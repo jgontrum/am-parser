@@ -36,7 +36,7 @@ class AMRParseRequest(BaseModel):
 
 
 class AMRParseResponse(BaseModel):
-    rpr: Any
+    amr: str
 
 
 # Create the service and hide the documentation if it is deployed in production
@@ -62,4 +62,4 @@ parser = Parser(settings.archive_path, settings.cuda_device, settings.overrides,
 
 @app.post("/")
 def parse(request: AMRParseRequest):
-    return parser.parse(request.sentence.strip())
+    return AMRParseResponse(amr=parser.parse(request.sentence.strip()))
