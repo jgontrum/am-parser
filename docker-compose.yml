@@ -1,0 +1,10 @@
+version: '2.2'
+
+services:
+  amr_parser:
+    build: .
+    ports:
+      - "0.0.0.0:80:80"
+    volumes:
+      - ./external_data:/app/external_data
+    restart: always
